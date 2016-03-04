@@ -16,7 +16,15 @@ void preencherVetor(int vetor[], int n)
 			vetor[i]=rand()%MAX;
 			}
 	}
-	
+void inverterVetor(int vetor[],int n)
+{
+	int i,temp;
+	for (i=0;i<n/2;i++){
+			temp=vetor[i];
+			vetor[i]=vetor[n-i-1];
+			vetor[n-i-1]=temp;
+	}
+}
 	
 ///////////////////////////
 void imprimirVetor(int vetor[], int n)
@@ -174,7 +182,7 @@ printf("\n\n1-BUBBLE SORT");
 printf("\n2-INSERTION SORT");
 printf("\n3-SELECTION SORT");
 printf("\n4-SHELL SORT");
-printf("\n5-QUICK SORT");
+printf("\n5-QUICK SORT-MEIO");
 printf("\n6-QUICK SORT ALEATORIO");
 printf("\n7-COUNTING SORT");
 printf("\n8-HEAP SORT");
@@ -222,7 +230,7 @@ else if (qualOrdenacao==4)
 else if (qualOrdenacao==5)
 	{
 	QueryPerformanceCounter(&tempoInicial);
-	quicksort(vetor, 0, n-1);
+	quicksort_meio(vetor, 0, n-1);
 	QueryPerformanceCounter(&tempoFinal);
 	QueryPerformanceFrequency(&freq);
 	tempoTotal = (float)(tempoFinal.QuadPart - tempoInicial.QuadPart)/freq.QuadPart;

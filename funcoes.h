@@ -13,4 +13,5 @@ int buscaBinaria(int vetor[],int inicio,int fim,int valorbuscado);
 void menuOrdenacao(int vetor[], int n, int *jaEstaOrdenado);
 void menuBusca(int vetor[], int n, int *jaEstaOrdenado);
 void prosseguir (void);
+void inverterVetor(int vetor[],int n);
 

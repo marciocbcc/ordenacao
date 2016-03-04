@@ -24,6 +24,25 @@ void quicksort_aleatorio(int *vet, int p, int r)
 	}	
 }
 
+void quicksort_meio(int *vet, int p, int r)
+{
+	int q;
+	if (p<r)
+	{
+		q=particionar_meio(vet, p, r);
+		quicksort_meio(vet, p, q-1);
+		quicksort_meio(vet, q+1, r);
+	}	
+}
+
+int particionar_meio (int *vet, int p, int r)
+{
+int meio=(p+r)/2;
+	trocaQ(vet, r, meio);	
+return particionar(vet, p, r);
+}
+
+
 int particionar (int *vet, int p, int r)
 {
 	int x= vet[r];
