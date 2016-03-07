@@ -7,16 +7,33 @@
 
 int main() 
 {
-int n,respostaMenuIncial;
+int n,tipoVetor,respostaMenuIncial;
 int jaEstaOrdenado=0;
 printf("***************CRIAR VETOR************\n");
 printf("Digite o tamanho do Vetor: \n");
 scanf("%d",&n);
 int vetor[n];
-preencherVetor(vetor,n);
+do{
+printf("TIPO do Vetor: \n");
+printf("1-Numeros 0-100\n");
+printf("2-CEPs de Belem\n");
+scanf("%d",&tipoVetor);
+if (tipoVetor==1){
+    preencherVetor(vetor,n);
+    printf("O VETOR CRIADO FOI PREENCHIDO COM VALORES ALEATORIOS !!!!!!!!!\n");
+    }
+    else
 
-//gerarCepBelem(vetor,n);
-printf("O VETOR CRIADO FOI PREENCHIDO COM VALORES ALEATORIOS !!!!!!!!!\n");
+        if (tipoVetor==2){
+            gerarCepBelem(vetor,n);
+            printf("O VETOR CRIADO FOI PREENCHIDO COM CEPs de Belem !!!!!!!!!\n");
+        }
+}while(tipoVetor!=1 && tipoVetor!=2 );    
+
+    
+
+
+
 
 do
 {
