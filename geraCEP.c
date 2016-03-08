@@ -3,12 +3,12 @@
 
 void gerarCepBelem(int vetor[], int n){
 	
-	int MAX=999999;
+	int MAX=999;
 		int i;
 		srand(time(NULL));
 		for (i=0;i<n;i++)
 			{
-			vetor[i]=66000000+rand()%MAX;
+			vetor[i]=66000000+(rand()%MAX)*1000+rand()%MAX;
 			}
 	
 }
