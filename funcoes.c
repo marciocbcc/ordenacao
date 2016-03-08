@@ -284,7 +284,7 @@ else if (qualOrdenacao==9)
 	else if (qualOrdenacao==10)
 	{
 	QueryPerformanceCounter(&tempoInicial);
-	radix_sort(vetor, n);
+	radixSort(vetor, n);
 	QueryPerformanceCounter(&tempoFinal);
 	QueryPerformanceFrequency(&freq);
 	tempoTotal = (float)(tempoFinal.QuadPart - tempoInicial.QuadPart)/freq.QuadPart;

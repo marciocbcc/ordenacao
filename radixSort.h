@@ -1,1 +1,1 @@
-void radix_sort(int *a, int n);
+void radixSort(int *vetor, int size);
